@@ -7,11 +7,12 @@ module V1
         }
       )
 
-      puts JSON.pretty_generate(data)
+      # puts JSON.pretty_generate(data)
 
-      BidRequestProcessor.call(data: data)
+      bid_request = BidRequestLoader.call(data: data)
+      BidRequestSender.call(bid_request: bid_request)
 
-      status 201
+      status 204
     end
   end
 end

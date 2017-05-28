@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170528072543) do
+ActiveRecord::Schema.define(version: 20170528085239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20170528072543) do
     t.string "name"
   end
 
+  create_table "devices", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.string "js"
+    t.string "os"
+    t.string "osv"
+    t.string "make"
+    t.string "model"
+    t.string "external_id"
+  end
+
   create_table "exchanges", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.string "canonical_id"
     t.string "name"
@@ -34,6 +43,13 @@ ActiveRecord::Schema.define(version: 20170528072543) do
     t.string "external_id"
     t.string "exchange_id"
     t.string "name"
+  end
+
+  create_table "users", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
+    t.string "exchange_id"
+    t.string "external_id"
+    t.string "gender"
+    t.string "yob"
   end
 
 end

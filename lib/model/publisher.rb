@@ -1,3 +1,3 @@
 class Publisher < ActiveRecord::Base
-  validates_presence_of :id, :external_id, :exchange_id
+  validates_presence_of :external_id, :exchange_id
 end

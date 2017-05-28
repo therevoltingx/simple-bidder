@@ -19,7 +19,7 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
-    DatabaseCleaner.clean_with(:truncation)
-    load "./db/seeds.rb"
+    #DatabaseCleaner.clean_with(:truncation)
+    #load './db/seeds.rb'
   end
 end

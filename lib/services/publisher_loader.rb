@@ -10,9 +10,9 @@ class PublisherLoader
 
       if publisher.name != publisher_data['name']
         publisher.name = publisher_data['name']
-        publisher.save
       end
 
+      publisher.save! if publisher.changed?
       return publisher
     end
   end
