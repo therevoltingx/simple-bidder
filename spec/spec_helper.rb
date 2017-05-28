@@ -5,7 +5,6 @@ require 'rspec'
 require 'rack/test'
 
 RSpec.configure do |config|
-  require 'sidekiq/testing'
   config.include FactoryGirl::Syntax::Methods
 
   config.expect_with :rspec do |expectations|
@@ -17,4 +16,10 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
+
+  config.before(:suite) do
+    ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+    DatabaseCleaner.clean_with(:truncation)
+    load "./db/seeds.rb"
+  end
 end

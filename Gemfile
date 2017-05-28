@@ -2,26 +2,24 @@ source 'http://rubygems.org'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-activerecord'
 gem 'puma'
+gem 'pg'
 gem 'rerun', require: false
 gem 'virtus'
 gem 'pry'
-gem 'aws-sdk'
 gem 'mixlib-config'
 gem 'require_all'
-gem 'mongoid', '~> 5.1.0'
 gem 'bcrypt'
 gem 'factory_girl'
-gem 'sidekiq'
-gem 'sidetiq'
-gem 'pony'
-gem 'erubis'
-gem 'rack-cors', require: 'rack/cors'
 gem 'clogger'
 gem 'aasm'
-gem 'redis', '~>3.2'
 gem 'faraday'
 gem 'faraday_middleware'
+
+gem 'sinatra-activerecord'
+gem 'sqlite3'
+gem 'rake'
 
 gem 'capistrano', '3.6.1',        require: false
 gem 'capistrano-rbenv',   require: false
@@ -36,5 +34,4 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec'
   gem 'rack-test'
-  gem 'mongoid-rspec', '3.0.0'
 end

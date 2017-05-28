@@ -11,6 +11,6 @@ require 'active_support/core_ext'
 require 'active_support/all'
 require './config/config'
 
-Bundler.require(:default, ENV['RACK_ENV'])
+Bundler.require(:default, ENV['RACK_ENV'] || 'development')
 
 require_all './lib'

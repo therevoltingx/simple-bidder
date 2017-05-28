@@ -8,4 +8,5 @@ class SimpleBidderApp < Sinatra::Base
   end
 
   register Sinatra::Contrib
+  register Sinatra::ActiveRecordExtension
 end

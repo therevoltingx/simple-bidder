@@ -14,11 +14,13 @@ describe V1::BidRequestController do
 
   context '.create' do
     context 'valid data is given' do
+      let(:exchange_id) { 'smaato' }
+
       let(:data) {
-        
+        File.read('./samples/smaato/rich-media.json')
       }
 
-      let(:res) { post '/', data, 'CONTENT_TYPE' => 'application/json' }
+      let(:res) { post "/#{exchange_id}", data, 'CONTENT_TYPE' => 'application/json' }
 
       it 'returns 201' do
         expect(res.status).to eq(201)
