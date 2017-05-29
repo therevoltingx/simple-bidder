@@ -13,6 +13,7 @@ class BidRequestLoader
 
       bid_request = BidRequest.new(
         id: SecureRandom.hex,
+        timestamp: DateTime.now,
         external_id: data['id'],
         exchange: exchange,
         publisher: publisher,

@@ -2,7 +2,9 @@ class BidRequestSerializer
   class << self
     def call(bid_request:)
       data = {
+        'timestamp' => bid_request.timestamp.iso8601,
         'type' => 'bid_request',
+        'bid_requests' => 1,
         'exchange_id' => bid_request.exchange.id,
         'publisher_id' => bid_request.publisher.id,
         'app_id' => bid_request.app.present? ? bid_request.app.id : nil,
@@ -23,7 +25,7 @@ class BidRequestSerializer
         'yob' => bid_request.user.yob
       }
 
-      return data
+      return data.to_json
     end
   end
 end

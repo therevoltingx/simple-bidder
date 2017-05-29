@@ -15,10 +15,11 @@ bundle exec rspec
 ```
 {
   "type": "bid_request",
-  "exchange_id": "smaato",
-  "publisher_id": "some-publisher",
-  "site_id": "some-site",
-  "device_id": "some-device",
+  "exchange_id": "ADFDFGDAF",
+  "publisher_id": "DFHGFGNSDFG",
+  "app_id": "OOKMASDFOIJASDFON",
+  "site_id": "DFHSFHSFDGDFG",
+  "device_id": "DFGSFGSDFGDSFASDFASDF",
   "country": "USA",
   "region": "CA",
   "city": "Los Angeles",
@@ -29,9 +30,8 @@ bundle exec rspec
   "osv": "7.1",
   "dimension": "320x480",
   "blocked_attributes": ["1", "2"],
-  "user_id": "some-user",
+  "user_id": "ADGADFASDFASDF",
   "gender": "male",
-  "yob": "1986",
-  "bid_floor": "0.10"
+  "yob": "1986"
 }
 ```

@@ -3,5 +3,5 @@ class BidRequest
   include VirtualModel
 
   attr_accessor :id, :external_id, :exchange, :publisher, :app, :site, :location,
-                :device, :slot, :user
+                :device, :slot, :user, :timestamp
 end

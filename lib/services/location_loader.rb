@@ -4,9 +4,9 @@ class LocationLoader
       location_data = data['device']['geo']
 
       location = Location.new(
-        country: data['country'],
-        region: data['region'],
-        city: data['city']
+        country: location_data['country'],
+        region: location_data['region'],
+        city: location_data['city']
       )
 
       return location

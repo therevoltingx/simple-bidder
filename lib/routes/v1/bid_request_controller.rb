@@ -7,10 +7,13 @@ module V1
         }
       )
 
-      # puts JSON.pretty_generate(data)
-
       bid_request = BidRequestLoader.call(data: data)
-      BidRequestSender.call(bid_request: bid_request)
+
+      RealtimeSender.call(
+        data: BidRequestSerializer.call(
+          bid_request: bid_request
+        )
+      )
 
       status 204
     end

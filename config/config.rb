@@ -10,7 +10,6 @@ module Config
   end
 
   config_context :tranquility do
-    default :address, ENV['TRANQUILITY_ADDRESS'] || '127.0.0.1'
-    default :port, ENV['TRANQUILITY_PORT'] || 8200
+    default :uri, ENV['TRANQUILITY_URI'] || 'http://127.0.0.1:8200/v1/post/events-v1'
   end
 end
