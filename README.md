@@ -3,6 +3,7 @@
 ## Setting Up
 
 This project require `rbenv` to be installed with `ruby-2.2.5`.
+
 Use `bundle install` to install all dependencies.
 
 You'll also need a running instance of Tranquility to send data to when running the specs.
@@ -21,6 +22,8 @@ TRANQUILITY_URI=http://192.168.1.2:8200/v1/post/events-v1 bundle exec rspec
 
 ```
 {
+  "timestamp": "2017-05-29T07:30:35+00:00",
+  "bid_requests": 1,
   "type": "bid_request",
   "exchange_id": "ADFDFGDAF",
   "publisher_id": "DFHGFGNSDFG",
